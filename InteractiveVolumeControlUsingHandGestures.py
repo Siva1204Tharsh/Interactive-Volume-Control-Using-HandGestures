@@ -26,12 +26,12 @@ interface = devices.Activate(
     IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
 volume = interface.QueryInterface(IAudioEndpointVolume)
 volRange=volume.GetVolumeRange()
-
-minVol=volRange[0]
-maxVol=volRange[1]
-vol =0
-volBar=400
-volPer=0
+minVol , maxVol , volBar, volPer= volRange[0] , volRange[1], 400, 0
+# minVol=volRange[0]
+# maxVol=volRange[1]
+# vol =0
+# volBar=400
+# volPer=0
 
 
 while True:
