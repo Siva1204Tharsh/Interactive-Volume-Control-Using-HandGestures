@@ -36,9 +36,9 @@ volPer=0
 
 while True:
     success,img=cap.read()
-    img=detector.findHands(img)
-    lmList, _ =detector.findPosition(img,results=True,draw=True)
-    if len(lmList) >=9:
+    img,results=detector.findHands(img )
+    lmList=detector.findPosition(img,results,draw=False)
+    if len(lmList) >= 9:
         # print(lmList[4],lmList[8])
         x1,y1=lmList[4][1],lmList[4][2]
         x2,y2=lmList[8][1],lmList[8][2]

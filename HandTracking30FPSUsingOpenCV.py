@@ -12,7 +12,7 @@ class HandDetector:
         )
         self.mpDraw=mp.solutions.drawing_utils
     
-    def findHands(self,img,draw=True):   
+    def findHands(self,img,draw=True):  
         results=self.hands.process(cv2.cvtColor(img,cv2.COLOR_BGR2RGB))
         if draw and results.multi_hand_landmarks:
             for handsLms in results.multi_hand_landmarks:
