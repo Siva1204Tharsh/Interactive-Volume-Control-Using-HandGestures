@@ -38,7 +38,7 @@ while True:
     success,img=cap.read()
     img,results=detector.findHands(img )
     lmList=detector.findPosition(img,results,draw=False)
-    if len(lmList) >= 9:
+    if len(lmList) > 4:
         # print(lmList[4],lmList[8])
         x1,y1=lmList[4][1],lmList[4][2]
         x2,y2=lmList[8][1],lmList[8][2]
